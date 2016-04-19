@@ -62,5 +62,5 @@ angular.module('yulpApp', ['ionic'])
       }
     }
   });
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/home/feed');
 })
