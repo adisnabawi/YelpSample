@@ -32,9 +32,12 @@ function FeedDetailsCtrl($stateParams, YelpAPI) {
 	console.log(vm.businessId);
 // 	YelpAPI.getData().then(function(res) {
 // vm.businesses = res.data.businesses;
-YelpAPI.getData(function(data) {
-vm.businesses = data.businesses;
-vm.business = vm.businesses[0]; // temporary
+
+YelpAPI.searchBusiness($stateParams.businessId,function(data) {
+vm.business = data; 
+// YelpAPI.getData(function(data) {
+// vm.businesses = data.businesses;
+// vm.business = vm.businesses[0]; // temporary
 });
 }
 })();
